@@ -1,0 +1,381 @@
+@import "mixvar.styl"
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+  font-family "PT Sans Narrow"
+html, body
+  height 100%
+  mp(0,0)
+html
+  font-size 10px
+  +med(480px)
+    font-size 8px
+body
+  overflow auto
+#test_bg
+  pos(p:fixed,t:0,l:0)
+  blok(100%,100%)
+#test_bg_border
+  outline 0.2rem solid red
+  min-height 100%
+  position relative
+#t1000
+  blok(100%,1000px)
+#wrap
+  {wrapp}
+  min-height 100%
+  background-color #d0d0d0
+  padding-bottom footerPad
+#footer_wrap
+  blok(100%,footerPad)
+  pos(b:0,l:0)
+  background black
+  {oh}
+.wrap
+  {wrapp}
+.sw
+  width 100rem
+  +med(tablet)
+    width 100%
+    min-width 320px
+.clear
+  blok(100%,c:both)
+.mauto
+  {mauto}
+.mautota
+  {mauto}
+  display table
+.ta_just
+  text-align justify
+  &:after
+    content ''
+    display inline-block
+    width 100%
+.tac,.ta_c
+  {tac}
+.tar,.ta_r
+  {tar}
+.tal,.ta_l
+  {tal}
+.ttn
+  {ttn}
+.ttl
+  {ttl}
+.ttu
+  {ttu}
+.ttc
+  {ttc}
+.vam
+  {vam}
+div,ul
+  list-style-type none
+p
+  font(1.4rem)
+a
+  {tdn}
+ul,li
+  list-style-type none
+.h2
+  position relative
+  h2
+    font(3rem,#151515,1,fw:700,tt: uppercase)
+    position relative
+    z-index 1
+  &:after
+    content ''
+    blok(100%,100%)
+    pos(t:1.2rem,l:-2rem)
+    {bb}
+    border 2px solid #86b6d5
+    z-index 0
+.but_t1
+  blok(16.2rem,3.6rem)
+  {oh}
+  spr(bp:0 -23.4rem)
+  {tac}
+  cursor pointer
+  display inline-block
+  mp()
+  m(1.3rem,-1.3rem)
+  span
+    display inline-block
+    pt 0.15rem
+    font-size 2rem
+    text-shadow 0 1px 0 rgba(255,255,255,.75)
+    color #183e80
+.head_wrap
+  wrap()
+  background-color #1b1f27
+  padding-bottom .9rem
+  z-index 15
+.head_d1
+  blok(f:left)
+  mt 0.7rem
+  .up_logo
+    blok(5.9rem,6.2rem,left)
+    spr(bp: 0 -88.6rem)
+    mp(2.1rem 0 0 2.9rem)
+  .hd1p1
+    font(5.2rem,#fff,1,700)
+    p(t:1.4rem,l:9.6rem)
+    m(0)
+  .hd1p2
+    font(2.1rem,#fff,1,fw:400)
+    display block
+    p(l:9.6rem)
+  +med(tablet)
+    {mcb}
+    p(b:2rem)
+    .up_logo
+      m(l:0,t:2.1rem)
+    .hd1p1
+    .hd1p2
+      padding-left 6.6rem
+.head_d2
+  blok(f:right)
+  m(t:2.8rem)
+  @extend .tar
+  a
+    font(2.2rem,#fff,1)
+    .icon1
+      blok(3rem,2.2rem)
+      spr(bp: 0 -4.7rem)
+      m(r:1rem)
+  p
+    font(2rem,#fff,1)
+    m(t:1.7rem)
+  +med(tablet)
+    {mcb}
+    {tac}
+    p
+      m(t:0.7rem)
+.head_d3
+  blok(18rem,f:right)
+  m(3.2rem 3rem 0 3.5rem)
+  {tar}
+  a
+    font(1.9rem,#fff,1)
+    .icon2
+      blok(2.5rem,2.5rem)
+      spr(bp:0 -13.3rem)
+      m(t:-0.7rem,r:0.9rem)
+    span
+      color #77afd4
+  .order_call
+    display inline-block
+    m(t:1.3rem,r:-0.3rem)
+  +med(tablet)
+    {mcb}
+    {tac}
+    margin-bottom 1.5rem
+#gen_menu_wrap
+  wrap()
+  pos(l:0)
+  m(t:.9rem)
+  .gm_open,.gm_close
+    display none
+    blok(5.7rem,5.7rem)
+    {tac}
+    color #fff
+    background-color #62a3ce
+    font-size 4rem
+    cursor pointer
+    &:hover
+      background-color darken(#62a3ce, 15%)
+  +med(tablet)
+    display table
+    width auto
+    .gm_open
+      display block
+    .gm_close
+      pos(t:0,r:-5.7rem)
+    .gen_menu
+      display none
+      ma(0)
+      {fl}
+      {tal}
+      li
+        display block
+        a
+          width 32rem
+.gen_menu
+  display none
+  @extend .mautota
+  word-spacing -0.2rem
+  {tac}
+  width auto
+  li
+    display inline-block
+    a
+      display inline-block
+      font(2.5rem,#fff,1)
+      mp(0,1.6rem 2.8rem)
+      background-color #8ec1e3
+      &:hover
+        transition 1s
+        text-shadow 0 0 4px #fff
+    &:nth-child(1) a
+      background-color #8ec1e3
+      transition 1s
+      &:hover
+        background-color darken(#8ec1e3,20%)
+    &:nth-child(2) a
+      background-color #77afd4
+      transition: 1s
+      &:hover
+        background-color darken(#77afd4,20%)
+    &:nth-child(3) a
+      background-color #62a3ce
+      transition 1s
+      &:hover
+        background-color darken(#62a3ce,20%)
+    &:nth-child(4) a
+      background-color #4f97c6
+      transition 1s
+      &:hover
+        background-color darken(#4f97c6,20%)
+    &:nth-child(5) a
+      background-color #1b88bb
+      transition 1s
+      &:hover
+        background-color darken(#1b88bb,20%)
+    &:nth-child(6) a
+      background-color #1279a9
+      transition 1s
+      &:hover
+        background-color darken(#1279a9,20%)
+#gen_slider
+  position relative
+  .owl_slider
+    position relative
+    {oh}
+    .owl-controls
+      display none
+    .oss
+      width 100%
+      img
+        width 100%
+      .osscapt
+        pos(t:0,l:50%)
+        m(t:9.1rem,l:-46.5rem)
+        font(2.7rem,#fff,1.2,700,tt:uppercase)
+        blok(maw:48rem)
+        +med(tablet)
+          m(t:4.1rem,l:-19rem)
+          font(2.2rem,#fff,1.2,700,tt:uppercase)
+          blok(maw:38rem)
+        +med(799px)
+          m(t:3.1rem,l:-18rem)
+          font(2rem,#fff,1.2,700,tt:uppercase)
+          blok(maw:36rem)
+        +med(480px)
+          m(t:2.1rem,l:-13.5rem)
+          font(1.5rem,#fff,1.2,700,tt:uppercase)
+          blok(maw:27rem)
+        +med(379px)
+          m(t:1.8rem,l:-11rem)
+          font(1.2rem,#fff,1.2,700,tt:uppercase)
+          blok(maw:22rem)
+  .os_prev,.os_next
+    blok(10%,100%)
+    z-index 10
+    cursor pointer
+  .os_prev
+    pos(t:0,l:0)
+    .os_prev_icon
+      blok(2.9rem,5rem)
+      pos(t:50%,l:50%)
+      ml -1.45rem
+      mt -2.5rem
+      spr(bp:0 -58rem)
+  .os_next
+    pos(t:0,r:0)
+    .os_next_icon
+      blok(2.9rem,5rem)
+      pos(t:50%,l:50%)
+      ml -1.45rem
+      mt -2.5rem
+      spr(bp:0 -52.5rem)
+#gen_production
+  pb 6.5rem
+  .gen_production
+    border-bottom
+    .h2
+      mt 4.1rem
+      mb 5.1rem
+    .gp_list
+      mb 4.9rem
+      .gpl_item
+        position relative
+        display inline-block
+        height 23rem
+        vertical-align top
+        mb 1rem
+        a
+          img
+            max-width 100%
+          .gpli_c
+            pos(t:50%,l:0)
+            width 100%
+            z-index 4
+            span
+              {tac}
+              display block
+              mt -2.5rem
+              font(3rem,#fff,1)
+          .grad_overlay1, .grad_overlay2
+            {ovl}
+            z-index 3
+          .grad_overlay1
+            background-color  rgba(94, 97, 98, 0.65)
+          .grad_overlay2
+            bim('cross_grad.png',100% 100%)
+            opacity 0
+          &:hover
+            .grad_overlay1
+              background-color transparent
+              transition 1s
+            .grad_overlay2
+              opacity 1
+              transition 1s
+      +med(tablet)
+        pa(0 1rem)
+        mb 1rem
+      +med(540px)
+        {tac}
+        .gpl_item
+          {oh}
+          mb 1.5rem
+  .gp_info
+    {tac}
+    .gpi_b
+      {w33}
+      display inline-block
+      vertical-align top
+      pa(0 1rem)
+      .gpi_p
+        font(2rem,#050505,1)
+      .gp_icon1
+      .gp_icon2
+      .gp_icon3
+        display inline-block
+        {vam}
+        mr 0.5rem
+      .gp_icon1
+        blok(3.7rem,3.7rem)
+        spr(0 -27.5rem)
+        mt -.5rem
+      .gp_icon2
+        blok(3.2rem,3rem)
+        spr(0 -16.3rem)
+      .gp_icon3
+        blok(2.9rem,3.1rem)
+        spr(0 -19.8rem)
+    +med(599px)
+      .gpi_b
+        width 100%
+        pa(0 1rem)
+        mb 1.5rem
+  +med(599px)
+    pb 3rem

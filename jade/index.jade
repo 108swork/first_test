@@ -1,0 +1,146 @@
+doctype html
+html(lang="en")
+	head
+		title Vector Stal
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css")
+		link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic-ext")
+		link(rel="stylesheet" type="text/css" href="js/outer/owl.carousel.css")
+		link(rel="stylesheet" type="text/css" href="css/min/main.css")
+
+		script(src="https://code.jquery.com/jquery-1.11.3.min.js") 
+		script(src="js/outer/owl.carousel.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js")
+		script(src="js/min/main.js") 
+
+	body
+		//- #test_bg
+		//-   #test_bg_border.mauto.sw
+		#wrap
+			.head_wrap
+				.header.sw.mauto 
+					.head_d1  
+						.up_logo
+						h1.hd1p1 ВекторСталь
+						strong.hd1p2 Изделия из нержавеющей стали
+					.head_d3
+						a.pulse_icon(href="tel:+79056923606")
+							.icon2.vam.pim
+							|8 <span>905</span> 692 36 06
+						.order_call.but_t1 
+							span Заказать звонок
+					.head_d2
+						a.pulse_icon(href="mailto:perila62@ya.ru")
+							.icon1.vam.pim
+							|perila62@ya.ru
+						p г. Рязань, Касимовское ш.67 А,  БЦ "СФЕРА"
+					.clear
+				#gen_menu_wrap
+					mixin mLn(name)
+						li
+							a(href="#")
+								span= name
+					ul.gen_menu
+						+mLn('Главная')
+						+mLn('Наши изделия')
+						+mLn('Галерея')
+						+mLn('О Компании')
+						+mLn('Полезная информация')
+						+mLn('Контакты')
+						.gm_close &#9650;
+					.gm_open &#8801;
+			#gen_slider 
+				.owl_slider
+					.os_slide1.oss
+						img(src="img/up_slider_slide1.jpg", alt="")
+						.osscapt Собственное происзводство изделий из нержавеющей стали любой сложности
+					.os_slide2.oss
+						img(src="img/up_slider_slide1.jpg", alt="")
+						.osscapt Другой текст
+				.os_prev 
+					.os_prev_icon
+				.os_next
+					.os_next_icon
+			#gen_production.wrap
+				.gen_production
+					mixin h2b(str)
+						.h2.mautota
+							h2= str 
+					+h2b('Мы производим')
+					.sw.mauto 
+						.gp_list.ta_just
+							.gpl_item
+								a(href="#")
+									img(src="img/prod_img1.jpg")
+									.gpli_c 
+										span Ограждения
+									.grad_overlay1
+									.grad_overlay2
+							&#32;
+							.gpl_item
+								a(href="#")
+									img(src="img/prod_img2.jpg")
+									.gpli_c 
+										span Входные группы
+									.grad_overlay1
+									.grad_overlay2
+							&#32;
+							.gpl_item
+								a(href="#")
+									img(src="img/prod_img3.jpg")
+									.gpli_c 
+										span Поручни и перила
+									.grad_overlay1
+									.grad_overlay2
+							&#32;
+							.gpl_item
+								a(href="#")
+									img(src="img/prod_img4.jpg")
+									.gpli_c 
+										span Комплектующие
+									.grad_overlay1
+									.grad_overlay2
+						.gp_info
+							.gpi_b
+								.gpi_p
+									.gp_icon1
+									|Гарантия на все изделия 5 лет
+							.gpi_b
+								.gpi_p
+									.gp_icon2
+									Изготовление от 1 дня
+							.gpi_b
+								.gpi_p
+									.gp_icon3
+									Не боятся высоких температур и воды
+			#akcii_line
+				.akcii_body
+					.akcii_item Скидка 10% до 10 октября
+					.akcii_item Другая акция
+					.akcii_item Ещё одна акция Другая акция
+
+
+
+
+
+
+
+
+
+
+
+
+
+			#t1000 
+
+
+
+
+
+
+
+
+			#footer_wrap
+				.footer

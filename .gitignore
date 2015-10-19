@@ -1,0 +1,12 @@
+node_modules/
+assets/templates/vectorstal/js/outer/
+connectors/
+core/
+ht.access
+index.php
+manager/
+sass/
+sprite/
+assets/templates/vectorstal/css/
+assets/templates/vectorstal/img/
+assets/templates/vectorstal/index.html
