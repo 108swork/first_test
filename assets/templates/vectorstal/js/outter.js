@@ -20,7 +20,18 @@ $(document).ready(function(){
     owl1.trigger('owl.next');
   });
 
-
+  var owl2 = $('.akcii_body');
+  owl2.owlCarousel({
+    items :1,
+		itemsDesktop: false,
+    autoHeight : true,
+		autoPlay : 8000,
+		responsive : true,
+		pagination : false,
+		itemsDesktopSmall: false,
+		itemsTablet: false,
+		itemsMobile: false
+  });
 
 
 
