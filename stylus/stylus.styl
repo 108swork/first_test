@@ -416,27 +416,33 @@ ul,li
           {vam}
       .howi_p
         font(2rem,#151515,1.3)
+        position relative
       &:nth-child(1)
         background-color #e1e7ee
+        z-index 10
         .hib_img
           blok(5.8rem,6rem)
           spr(0 -75.5rem)
       &:nth-child(2)
         background-color #cfdae9
+        z-index 9
         .hib_img
           blok(6.1rem,6.1rem)
           spr(0 -82rem)
       &:nth-child(3)
+        z-index 8
         background-color #c4d2e3
         .hib_img
           blok(6.3rem,5.7rem)
           spr(0 -69.3rem)
       &:nth-child(4)
+        z-index 7
         background-color #cfdae9
         .hib_img
           blok(6.2rem,6.2rem)
           spr(0 -95.3rem)
       &:nth-child(5)
+        z-index 6
         background-color #e1e7ee
         .hib_img
           blok(7.9rem,4.9rem)
@@ -447,3 +453,109 @@ ul,li
       .howw_item
         width 30rem
         {mcb}
+  .partners_list
+    {mauto}
+    {sw}
+    mt 5.2rem
+    mb 3rem
+    .partners_item
+      {vam}
+      &:nth-child(1)
+        blok(12rem,8.5rem)
+        spr(0 -109.5rem)
+      &:nth-child(2)
+        blok(15.6rem,4.5rem)
+        spr(0 -36.7rem)
+      &:nth-child(3)
+        blok(11rem,7rem)
+        spr(0 -102rem)
+      &:nth-child(4)
+        blok(17.6rem,4.9rem)
+        spr(0 -41.7rem)
+      &:nth-child(5)
+        blok(9.6rem,8.8rem)
+        spr(0 -118.5rem)
+    +med(tablet)
+      width 100%
+      {tac}
+      .partners_item
+        ma(0 2.5rem 1rem)
+    +med(400px)
+      .partners_item
+        {mcb}
+        mb 4rem
+#fake_wrap
+  box-shadow 0px 1px 5px 0px rgba(0, 0, 0, 0.75)
+  grad(#f4f6f7,#e3e4e5)
+  {oh}
+  .h2
+    {clear}
+    mt 3rem
+    mb 5.4rem
+  .fake_body
+    {oh}
+    mb 3.3rem
+    .fake_left
+      ml 1rem
+      mt 1.8rem
+      {fl}
+      width 32rem
+      p
+        font(2.2rem,#151515)
+        span
+          {ttu}
+          color #0664ac
+    .fake_right
+      {fr}
+      width 64rem
+      img
+        height 15.8rem
+  +med(tablet)
+    .h2
+      mb 1rem
+    .fake_body
+      width 100%
+      .fake_left
+        width 100%
+        {clear}
+        {tac}
+        pa(1rem 2rem)
+        mb 2rem
+      .fake_right
+        width 100%
+        {clear}
+        {tac}
+        pa(0 2rem)
+        img
+          {clear}
+          ma 1rem
+#contact_wrap
+  .contact_body.sw.oh
+    .cont_left
+      .conll_up_p
+        p
+      .conll_tel
+        .pulse_icon
+          .pim
+          a
+            display inline-block
+        .order_call.but_t1
+          span
+      .conll_mail
+        .pulse_icon
+          .pim
+          a
+            display inline-block
+        .order_call.but_t1
+          span
+      .conll_sheld
+        .pulse_icon
+          .pim
+          p
+            ma(0)
+        p
+          font(2.2rem,#151515)
+          span
+    .cont_right
+      .yamap
+        blok(60.7rem,36.6rem)

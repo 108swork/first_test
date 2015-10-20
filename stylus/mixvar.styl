@@ -16,6 +16,9 @@ wrapp =
   width 100%
   min-width 320px
   position relative
+sw =
+  width 100rem
+  min-width 320px
 tdn =
   text-decoration none
 oh =
@@ -128,3 +131,10 @@ wrap(o=visible,w=100%,p=relative,f=none,c=both)
   position p
   float f
   clear c
+grad(cb,ce,deg=0deg,degpr=90deg)
+  background-color cb
+  background -webkit-linear-gradient(degpr, cb 0%, ce 100%)
+  background -moz-linear-gradient(degpr, cb 0%, ce 100%)
+  background -o-linear-gradient(degpr, cb 0%, ce 100%)
+  background -ms-linear-gradient(degpr, cb 0%, ce 100%)
+  background linear-gradient(deg, cb 0%, ce 100%)

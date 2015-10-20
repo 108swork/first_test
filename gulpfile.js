@@ -34,7 +34,6 @@ gulp.task('sprite', function() {
                 algorithm: 'top-down',
                 padding: 5
             }));
-
     spriteData.img.pipe(gulp.dest('./assets/templates/vectorstal/img/'));
     spriteData.css.pipe(gulp.dest('./assets/templates/vectorstal/css/'));
 });
