@@ -222,7 +222,7 @@ ul,li
         background-color darken(#8ec1e3,20%)
     &:nth-child(2) a
       background-color #77afd4
-      transition: 1s
+      transition 1s
       &:hover
         background-color darken(#77afd4,20%)
     &:nth-child(3) a
@@ -685,3 +685,286 @@ ul,li
         {tac}
         a
           {mautota}
+#product_wrap
+  pb 6rem
+  {oh}
+  .sw
+    .product_up
+      .left_menu
+        pt 3.4rem
+        width 21.5rem
+        {fl}
+        .lm_list
+          > li
+            > a
+              width 100%
+              pa(1.9rem 2rem 1.7rem)
+              display block
+              background #77afd4
+              span
+                  font(2.2rem,#fff,1,700)
+            &:hover
+              > a
+                text-shadow 0 0 3px rgba(255,255,255,.75)
+                cursor pointer
+            &:nth-child(1)
+              > a
+                background #77afd4
+                transition 1s
+                &:hover
+                  background darken(#77afd4,4%)
+            &:nth-child(2)
+              > a
+                background darken(#77afd4,8%)
+                transition 1s
+                &:hover
+                  background darken(#77afd4,12%)
+            &:nth-child(3)
+              > a
+                background darken(#77afd4,16%)
+                transition 1s
+                &:hover
+                  background darken(#77afd4,20%)
+            &:nth-child(4)
+              > a
+                background darken(#77afd4,24%)
+                transition 1s
+                &:hover
+                  background darken(#77afd4,28%)
+            &:nth-child(5)
+              > a
+                background darken(#77afd4,32%)
+                transition 1s
+                &:hover
+                  background darken(#77afd4,36%)
+            &:nth-child(6)
+              > a
+                background darken(#77afd4,40%)
+                transition 1s
+                &:hover
+                  background darken(#77afd4,44%)
+            &:nth-child(7)
+              > a
+                background darken(#77afd4,48%)
+                transition 1s
+                &:hover
+                  background darken(#77afd4,52%)
+            &:nth-child(8)
+              > a
+                background darken(#77afd4,56%)
+                transition 1s
+                &:hover
+                  background darken(#77afd4,60%)
+            ul.lm_subitem
+              bim('product_item_bg.jpg',bs:cover,bp:50% 50%)
+              // display none
+              li
+                a
+                  width 100%
+                  pa(1.6rem 2rem 1.1rem)
+                  display block
+                  background transparent
+                  span
+                    font(2rem,#1d487e,1)
+              li.active
+                a
+                  bim('izd_button_grad.jpg',bs:cover,bp:50% 50%)
+                  box-shadow 0 0px 5px 1px rgba(0,0,0,.75)
+                  position relative
+                  z-index 1
+                  span
+                    font(2rem,#fff,1,700)
+              li:hover
+                a
+                  cursor pointer
+                  span
+                    transition .5s
+                    color #fff
+                    text-shadow 0 0 2px rgba(0,0,0,.5)
+              li.active:hover
+                a
+                  cursor default
+          li.active
+            ul.lm_subitem
+              display block
+        +med(480px)
+          width 98%
+          {clear}
+          {mautota}
+      .product_body
+        {oh}
+        .breadcrumbs
+          mt 3.1rem
+          ml 3.2rem
+          {clear}
+          p
+            font(1.6rem,#4f97c6,1)
+            a
+              font(1.6rem,#4f97c6,1)
+              text-decoration underline
+              &:hover
+                text-decoration none
+            span
+              font(1.6rem,#4f97c6,1,700)
+        .pb_left
+          ml 3.3rem
+          mt 2.1rem
+          width 28.7rem
+          {fl}
+          a.img_big
+            width 100%
+            {clear}
+            mb 2.1rem
+            display block
+            img
+              width 100%
+          .pbl_imagelist
+            width 100%
+            mb -2rem
+            .pbliml_item
+            .pbliml_null
+              display inline-block
+            .pbliml_item
+              width 8.2rem
+              height 8.5rem
+              {oh}
+              img
+                width 100%
+              +med(480px)
+                width 30%
+                height auto
+            .pbliml_null
+              width 8.2rem
+              height 0
+          .pbl_p
+            p
+              font(1.8rem,#000,1.1)
+              mb .7rem
+              span
+                font(1.8rem,#3a93be,1.1)
+          +med(480px)
+            width 98%
+            pa(1.5rem 1rem)
+            {clear}
+            {mautota}
+        .pb_right
+          width 42.7rem
+          {fr}
+          .h2
+            ma(0)
+            ml 1.5rem
+            mt 1.5rem
+            {tar}
+          .pbr_param
+            width 100%
+            mt 3.7rem
+            pb .9rem
+            border-bottom 1px solid #1d487e
+            .pbrp_item
+              mb 1rem
+              .pbrpi_l
+                width 20rem
+                display inline-block
+                font(2.2rem,#000,1.3,700)
+                .dico
+                  blok(1.7rem,1.8rem)
+                  display inline-block
+                  spr(0 0)
+                  position relative
+                  top .3rem
+                  mr 1rem
+              .pbrpi_r
+                pl 1rem
+                display inline-block
+                font(2.2rem,#000)
+                span
+                  font(2.2rem,#1b88bb)
+          .pbr_calc
+            h3
+              font(2.5rem,#1b88bb,1,700)
+              mt 1.7rem
+              mb 1rem
+            .pbrc_item
+              width 100%
+              mb .8rem
+              .pbrci_l
+              .pbrci_r
+                display inline-block
+                vertical-align middle
+              .pbrci_l
+                width 20rem
+                font(2.2rem,#000,1,700)
+                .dico
+                  blok(1.7rem,1.8rem)
+                  display inline-block
+                  spr(0 0)
+                  position relative
+                  top .3rem
+                  mr 1rem
+              .pbrci_r
+                max-width 22rem
+                font(2.2rem,#000)
+                position relative
+                top -.3rem
+                input
+                  border none
+                  outline none
+                  width 7rem
+                  pa(.3rem 1.5rem)
+                  border-radius 5px
+                  background #e4e1e1
+                  box-shadow 0px 1px 1px 0px rgba(0,0,0,0.07)
+                  box-shadow inset 0px 0px 5px 2px rgba(255,255,255,.5)
+                span
+                  font(2.5rem,#1b88bb,1)
+                .min_p
+                  font(1.6rem,#000,1.1)
+                  mt .3rem
+                &:last-child
+                  vertical-align top
+                  max-width 15rem
+            .but_t1
+              {fr}
+              mr 7.5rem
+              mt 0
+              +med(480px)
+                {clear}
+                {mautota}
+                pa(0)
+                mb 1rem
+                mt 1rem
+            .pbrc_choise
+              width 100%
+              mb 2rem
+              p
+                font(2.2rem,#000,1,700)
+                span
+                  ml 1rem
+                  mr 1.85rem
+                  display inline-block
+                  position relative
+                  top .5rem
+                  blok(3.4rem,2.8rem)
+                  border none
+                  outline none
+                  border-radius 5px
+                  background #e4e1e1
+                  box-shadow 0px 1px 1px 0px rgba(0,0,0,0.07)
+                  box-shadow inset 0px 0px 5px 2px rgba(255,255,255,.5)
+                  cursor pointer
+          +med(480px)
+            width 98%
+            pa(0 1rem)
+            {clear}
+            {mautota}
+    .product_down
+      {clear}
+      width 100%
+      mt 3.3rem
+      p
+        font(2rem,#000)
+      +med(480px)
+        width 98%
+        pa(0 1rem)
+        {clear}
+        {mautota}

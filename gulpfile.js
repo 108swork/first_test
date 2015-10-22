@@ -14,7 +14,7 @@ gulp.task('allcss', function () {
   gulp.src('./stylus/**/*.styl')
         .pipe(plumber())
         .pipe(stylus())
-        .pipe(minifyCss({compatibility: 'ie8'}))
+        // .pipe(minifyCss({compatibility: 'ie8'}))
         .pipe(autoprefixer({
             browsers : ['> 1%', 'last 3 versions','Firefox > 12', 'ie > 7']
         }))
@@ -41,7 +41,7 @@ gulp.task('sprite', function() {
 gulp.task('jade', function() {
   gulp.src('jade/*.jade')
     .pipe(jade({
-      pretty: false //  uncompress html
+      pretty: true //  uncompress html
     }))
     .pipe(gulp.dest('./assets/templates/vectorstal'))
 });

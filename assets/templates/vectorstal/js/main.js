@@ -36,5 +36,20 @@ $(document).ready(function(){
     menuScroll();
   });
 
+  $('.lm_item').not('.active').find('ul').css({display:'none'});
+
+  $('.lm_item').click(function(){
+    if($(this).is('.active')) {
+      $(this).removeClass('active');
+      var targ = $(this).find('ul');
+      $(targ).slideUp();
+    }
+    else {
+      $('.lm_item').removeClass('active'); // если нужно сворачивать остальные меню
+      $('.lm_item').find('ul').slideUp(); // если нужно сворачивать остальные меню
+      $(this).addClass('active');
+      $(this).find('ul').slideDown();
+    }
+  });
 
 });
