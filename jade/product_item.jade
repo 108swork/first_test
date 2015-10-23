@@ -1,0 +1,294 @@
+mixin h2b(str)
+	.h2.mautota
+		h2= str 
+mixin mLn(name) 
+	li 
+		a(href="#")
+			span= name
+mixin mAn(name)
+	a(href="#")
+		span= name
+doctype html
+html(lang="en")
+	head
+		title Vector Stal
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css")
+		link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic-ext")
+		link(rel="stylesheet" type="text/css" href="js/outer/owl.carousel.css")
+		link(rel="stylesheet" type="text/css" href="css/main.css")
+
+		script(src="https://code.jquery.com/jquery-1.11.3.min.js") 
+		script(src="js/outer/owl.carousel.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js")
+		script(src="js/dev/main.js") 
+
+	body
+		//- #test_bg
+		//-   #test_bg_border.mauto.sw
+		#wrap
+			.head_wrap
+				.header.sw.mauto 
+					a(href="#").head_d1  
+						.up_logo
+						h1.hd1p1 ВекторСталь
+						strong.hd1p2 Изделия из нержавеющей стали
+					.head_d3
+						a.pulse_icon(href="tel:+79056923606")
+							.icon2.vam.pim
+							|8 <span>905</span> 692 36 06
+						.order_call.but_t1 
+							span Заказать звонок
+					.head_d2
+						a.pulse_icon(href="mailto:perila62@ya.ru")
+							.icon1.vam.pim
+							|perila62@ya.ru
+						p г. Рязань, Касимовское ш.67 А,  БЦ "СФЕРА"
+					.clear
+				#gen_menu_wrap
+					ul.gen_menu
+						+mLn('Главная')
+						+mLn('Наши изделия')
+						+mLn('Галерея')
+						+mLn('О Компании')
+						+mLn('Полезная информация')
+						+mLn('Контакты')
+						.gm_close &#9650;
+					.gm_open &#8801;
+			#gen_slider 
+				.owl_slider
+					.os_slide1.oss
+						img(src="img/up_slider_slide1.jpg", alt="")
+						.osscapt Собственное происзводство изделий из нержавеющей стали любой сложности
+					.os_slide2.oss
+						img(src="img/up_slider_slide1.jpg", alt="")
+						.osscapt Другой текст
+				.os_prev 
+					.os_prev_icon
+				.os_next
+					.os_next_icon
+			#product_wrap.oh
+				.sw.mauto.oh
+					.product_up.oh
+						.left_menu
+							.lm_list
+								li.lm_item.active
+									a
+										span Ограждения
+									ul.lm_subitem
+										li.active
+											a
+												span Ограждения со струнами
+										li
+											a
+												span Ограждения со стеклами
+										li
+											a
+												span Ограждения со струнамии стеклами
+								li.lm_item
+									a
+										span Входные группы
+									ul.lm_subitem
+										li.active
+											a
+												span Ограждения со струнами
+										li
+											a
+												span Ограждения со стеклами
+										li
+											a
+												span Ограждения со струнамии стеклами
+								li.lm_item
+									a
+										span Поручни и перила
+									ul.lm_subitem
+										li.active
+											a
+												span Ограждения со струнами
+										li
+											a
+												span Ограждения со стеклами
+										li
+											a
+												span Ограждения со струнамии стеклами
+								li.lm_item
+									a
+										span Комплектующие
+									ul.lm_subitem
+										li.active
+											a
+												span Ограждения со струнами
+										li
+											a
+												span Ограждения со стеклами
+										li
+											a
+												span Ограждения со струнамии стеклами
+						.product_body
+							.breadcrumbs
+								p
+									a(href="#") Наши изделия
+									|&#32;>&#32;
+									a(href="#") Ограждения
+									|&#32;>&#32;
+									span Ограждения со струнами
+							.pb_left
+								a.img_big
+									img(src="img/prod_img1.jpg")
+								.pbl_imagelist.ta_just
+									.pbliml_item
+										a 
+											img(src="img/prod_img2.jpg")
+									|&#32;
+									.pbliml_item
+										a 
+											img(src="img/prod_img3.jpg")
+									|&#32;
+									.pbliml_item
+										a 
+											img(src="img/prod_img4.jpg")
+									|&#32;
+									.pbliml_null
+									|&#32;
+									.pbliml_null										
+								.pbl_p
+									p.
+										С каждого заказанного Вами метра,
+										сумма в размере <span>100 руб</span>
+										направляется на приобретение
+										необходимого оборудования и вещей
+										для деток <span>«Дома малютки»</span>
+										Ваше пожертвование: <span>120 Руб</span>
+									p.
+										В этом месяце уже собрано: <span>5000 Руб</span>
+										Для деток «Дома малютки»
+							.pb_right
+								+h2b('Ограждение со стРунами')
+								.pbr_param
+									.pbrp_item
+										.pbrpi_l
+											.dico
+											|стойки:
+										.pbrpi_r 70 мм
+									.pbrp_item
+										.pbrpi_l
+											.dico
+											|перила:
+										.pbrpi_r 80 мм
+									.pbrp_item
+										.pbrpi_l Толщина трубы:
+										.pbrpi_r 3 мм
+									.pbrp_item
+										.pbrpi_l Сталь:
+										.pbrpi_r Gjhsfuwfh
+									.pbrp_item
+										.pbrpi_l Коррозийная стойкость:
+										.pbrpi_r 80%
+									.pbrp_item
+										.pbrpi_l Цена за п.м:
+										.pbrpi_r
+											span от 3 000 Руб/п.м.
+								form(action="#" method="post")
+									.pbr_calc
+										h3 Расчет стоимости
+										.pbrc_item
+											.pbrci_l Длина ограждения:
+											.pbrci_r
+												input(value="3000")
+												|мм
+										.pbrc_item
+											.pbrci_l
+												.dico
+												|поручня:
+											.pbrci_r
+												input(value="70")
+												|мм
+										.pbrc_choise
+											<input type="radio" checked="true" name="group1" id="r1" value="string" /><label for="r1"> Струны <div><span></span></div></label>
+											<input type="radio" name="group1" id="r2" value="glass" /><label for="r2"> Стекло <div><span></span></div></label>
+										.pbrc_item
+											.pbrci_l Количество струн:
+											.pbrci_r
+												input(value="3")
+										.pbrc_item
+											.pbrci_l Цена:
+											.pbrci_r
+												span 12 000 Руб
+												.min_p.
+													Цена является
+													приблизительной и может
+													меняться в зависимости от сложности
+										.but_t1
+											span Оставить заявку
+					.product_down
+						p.
+							Нередко именно нержавеющий  навес перед входом или лестничные ограждения из нержавейки акцентируют внимание на архитектурных тенденциях целого здания. Например, строгие нержавеющие ограждения всегда окажутся оригинальным минималистским штрихом. Так или иначе, но нержавеющие лестничные перила являются не только эстетическим элементом. Немаловажным фактором являются функциональные достоинства нержавейки, ограждения из которой всегда комфортны и безопасны.<br>
+							Нержавеющие перила применяются не только для оснащения лестничных маршей. Нержавеющие перила часто применяются как конструкции, обеспечивающие безопасность на высотных площадках, балконах, крышах или террасах. Лестничные ограждения из нержавейки, невзирая на дизайнерское решение, имеют похожую конструкцию, а поэтому и монтируются на общих принципах. Ограждения из нержавеющей стали актуальны для всех типов жилых и производственных строений, а также для офисных и торговых помещений. Поручни из нержавеющей стали это важная часть любых перил. Они выступают в качестве соединительного элемента всей оградительной конструкции, являясь в то же время элегантным эстетическим штрихом
+			#fake_wrap
+				+h2b('Внимание! Подделка')
+				.fake_body.sw.mauto
+					.fake_left
+						p.
+							Даже <span>спустя годы,</span>  вы гарантированно
+							<span>не увидите</span> ничего <span>подобного</span> 
+							на наших <span>изделиях</span>
+					.fake_right.ta_just
+						img(src="img/fake1.jpg")
+						&#32;
+						img(src="img/fake2.jpg")
+						&#32;
+						img(src="img/fake3.jpg")
+						&#32;
+						img(src="img/fake4.jpg")
+			#contact_wrap
+				+h2b('Контакты')
+				.contact_body.sw.mauto.oh
+					.cont_left
+						.conll_up_p
+							p Россия, Рязанская область,
+							p г.Рязань, Касимовское ш.67 А, БЦ "СФЕРА"
+						.conll_tel
+							.pulse_icon
+								.pim
+								a(href="tel:+79056923606") +7(905) 692-36-06
+							.order_call.but_t1
+								span Заказать звонок
+						.conll_mail
+							.pulse_icon
+								.pim
+								a(href="mailto:perila62@ya.ru") perila62@ya.ru
+							.order_call.but_t1
+								span Написать нам
+						.conll_sheld
+							.pulse_icon
+								.pim
+								p График работы:
+							p пн.-пт. <span>9.00-21.00</span>
+							p сб.-вс. <span>9.00-19.00</span>
+					.cont_right
+						.yamap
+							script(src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=oZcXRyUBOef0xCryDUt4uK6C78hLwWOT&width=607&height=366&lang=ru_RU&sourceType=constructor")
+			#footer_wrap
+				.footer.sw.mauto
+					a(href="#").foo_logo
+						.fli
+						.flp1 ВекторСталь
+						.flp2	Изделия из нержавеющей стали							
+					.foo_col1
+						strong Наши изделия                                                       
+						+mAn('Ограждения')
+						+mAn('Входные группы')
+						+mAn('Поручни и перила')
+						+mAn('Комплектующие')
+					.foo_col2
+						strong Полезная информация
+						+mAn('Это интересно')
+						+mAn('Вакансии')
+						+mAn('ЧаВо')
+						+mAn('Осторожно - дешевые перила. Подделка.')
+					.foo_col3
+						strong О нас
+						+mAn('Новости')
+						+mAn('История')

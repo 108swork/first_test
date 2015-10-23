@@ -14,12 +14,12 @@ gulp.task('allcss', function () {
   gulp.src('./stylus/**/*.styl')
         .pipe(plumber())
         .pipe(stylus())
-        .pipe(gulp.dest('./vectorstal/css'))
-        .pipe(minifyCss({compatibility: 'ie8'}))
+        .pipe(concat('main.css'))
         .pipe(autoprefixer({
             browsers : ['> 1%', 'last 3 versions','Firefox > 12', 'ie > 7']
         }))
-        .pipe(concat('main.css'))
+        .pipe(gulp.dest('./vectorstal/css'))
+        .pipe(minifyCss({compatibility: 'ie8'}))
         .pipe(plumber.stop())
         .pipe(gulp.dest('./vectorstal/css/min'));
 });
@@ -48,8 +48,9 @@ gulp.task('jade', function() {
 
 gulp.task('uglify', function() {
   gulp.src('./vectorstal/js/*.js')
-    .pipe(uglify())
     .pipe(concat('main.js'))
+    .pipe(gulp.dest('./vectorstal/js/dev'))
+    .pipe(uglify())
     .pipe(gulp.dest('./vectorstal/js/min'))
 });
 
