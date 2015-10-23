@@ -14,14 +14,14 @@ gulp.task('allcss', function () {
   gulp.src('./stylus/**/*.styl')
         .pipe(plumber())
         .pipe(stylus())
-        // .pipe(minifyCss({compatibility: 'ie8'}))
+        .pipe(gulp.dest('./vectorstal/css'))
+        .pipe(minifyCss({compatibility: 'ie8'}))
         .pipe(autoprefixer({
             browsers : ['> 1%', 'last 3 versions','Firefox > 12', 'ie > 7']
         }))
         .pipe(concat('main.css'))
         .pipe(plumber.stop())
-
-        .pipe(gulp.dest('./assets/templates/vectorstal/css/min'));
+        .pipe(gulp.dest('./vectorstal/css/min'));
 });
 
 gulp.task('sprite', function() {
@@ -34,8 +34,8 @@ gulp.task('sprite', function() {
                 algorithm: 'top-down',
                 padding: 5
             }));
-    spriteData.img.pipe(gulp.dest('./assets/templates/vectorstal/img/'));
-    spriteData.css.pipe(gulp.dest('./assets/templates/vectorstal/css/'));
+    spriteData.img.pipe(gulp.dest('./vectorstal/img/'));
+    spriteData.css.pipe(gulp.dest('./vectorstal/css/'));
 });
 
 gulp.task('jade', function() {
@@ -43,20 +43,20 @@ gulp.task('jade', function() {
     .pipe(jade({
       pretty: true //  uncompress html
     }))
-    .pipe(gulp.dest('./assets/templates/vectorstal'))
+    .pipe(gulp.dest('./vectorstal'))
 });
 
 gulp.task('uglify', function() {
-  gulp.src('./assets/templates/vectorstal/js/*.js')
+  gulp.src('./vectorstal/js/*.js')
     .pipe(uglify())
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('./assets/templates/vectorstal/js/min'))
+    .pipe(gulp.dest('./vectorstal/js/min'))
 });
 
 gulp.task('watch', function() {
   gulp.watch('./stylus/**/*.styl', ['allcss']);
   gulp.watch('jade/*.jade', ['jade']);
-  gulp.watch('./assets/templates/vectorstal/js/*.js', ['uglify']);
+  gulp.watch('./vectorstal/js/*.js', ['uglify']);
 });
 
 gulp.task('default', function() {
